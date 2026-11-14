@@ -1,0 +1,21 @@
+USER-SUPPLIED VALUES:
+adminPassword: qwe123qwe123
+datasources:
+  datasources.yaml:
+    apiVersion: 1
+    datasources:
+    - access: proxy
+      isDefault: true
+      name: Prometheus
+      type: prometheus
+      url: http://prometheus-server.monitoring.svc.cluster.local
+persistence:
+  enabled: true
+  size: 5Gi
+sidecar:
+  dashboards:
+    enabled: true
+    label: grafana_dashboard
+  datasources:
+    enabled: true
+    label: grafana_datasource
